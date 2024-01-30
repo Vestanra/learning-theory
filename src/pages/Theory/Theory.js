@@ -1,9 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet,} from "react-router-dom";
+import { Wrap, Link } from "./Theory.styled";
 
 export const Theory = () => {
     return (
         <div>
-            <ul>
+            <Wrap>
                 <li>
                     <Link to="css-html">css-html</Link>
                 </li>
@@ -13,7 +14,7 @@ export const Theory = () => {
                 <li>
                     <Link to="react">react</Link>
                 </li>
-            </ul>
+            </Wrap>
             <Outlet/>
         </div>
     )

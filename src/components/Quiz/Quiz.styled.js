@@ -61,10 +61,10 @@ display: flex;
 width: 120px;
 height: 40px;
 border-radius: 4px;
-border: none;
 justify-content: center;
 align-items: center;
 transition: box-shadow 0.3s ease-in-out;
+border: 1px solid rgba(96, 151, 134, 0.2);
 @media (max-width: 767px){
     width: 96px; 
     height: 36px;

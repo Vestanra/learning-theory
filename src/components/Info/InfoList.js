@@ -1,8 +1,11 @@
+import { Text, Title, Wrap } from "./InfoList.styled"
+
 export const InfoList = ({ info, index }) => {
     return (
-        <div>
-            <p><span>{index + 1}</span>{info.question}</p>
-            <p>{info.answer}</p>
-        </div>
+        <Wrap>
+            
+            <Title>{index + 1}. {info.question}</Title>
+            <Text>{info.answer}</Text>
+        </Wrap>
     )    
 }

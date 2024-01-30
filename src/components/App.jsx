@@ -16,7 +16,7 @@ export const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<SharedLayout/>}>
-          <Route path="/quizzes/" element={<Quizzes />}>
+          <Route path="/" element={<Quizzes />}>
             <Route path="css-html" element={<CssHtmlQuiz />} />
             <Route path="js" element={<JSQuiz />} />
             <Route path="react" element={<ReactQuiz />} />
@@ -27,7 +27,7 @@ export const App = () => {
             <Route path="js" element={<JSInfo />} />
             <Route path="react" element={<ReactInfo />} />
           </Route>
-          <Route path="*" element={<Navigate to="/quizzes" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
       <GlobalStyle />

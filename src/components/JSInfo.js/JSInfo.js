@@ -5,9 +5,8 @@ export const JSInfo = () => {
     
     return (
         <div>
-            <h1>JavaScript</h1>
             <ul>
-                {info.map(((el, index) => <li key={el.id}><InfoList info={el} index={index} /></li>))}
+                {info.map(((el, index) => <li key={el.id}><InfoList info={el} index={index} title={'JavaScript'} /></li>))}
             </ul>
         </div>
     )
