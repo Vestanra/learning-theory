@@ -5,10 +5,10 @@ export const Quizzes = () => {
     return (
         <div>
             <ButtonWrapp>
-                <Link to="css-html" color="blue">css, html</Link>
-                <Link to="js" color="red">js</Link>
-                <Link to="react" color="green">react</Link>
-                <Link to="saved-items" color="pink">saved items</Link>
+                <Link to="css-html" color="#c3daea">css, html</Link>
+                <Link to="js" color="#C4B9B6">js</Link>
+                <Link to="react" color="#a8bfa6">react</Link>
+                <Link to="saved-items" color="#89a8a3">saved items</Link>
             </ButtonWrapp>
             <Outlet />
         </div>

@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
-import { Button, ButtonsWrap, Card, Container, Wrap } from "./Quiz.styled";
+import { Button, ButtonSvg, ButtonsWrap, Card, Container, Wrap, Text } from "./Quiz.styled";
 import { RiBookmarkFill } from "react-icons/ri";
 import { RiBookmarkLine } from "react-icons/ri";
+import { Navigate } from "react-router-dom";
 
 export const Quiz = ({ quiz }) => {
     const [index, setIndex] = useState(0);
     const [result, setResult] = useState(false);
     const [flipped, setFlipped] = useState(false);
     const [selected, setSelected] = useState(false);
-      
+    
     const [saved, setSaved] = useState(() => {
         const savedQuizzes = localStorage.getItem('saved')
         if (savedQuizzes !== null) {
@@ -64,28 +65,24 @@ export const Quiz = ({ quiz }) => {
         setFlipped(!flipped);
     };
 
+    if (result) {
+        return <Navigate to="/quizzes" replace />
+    };
+
     return (
         <Container>
-            {!result ?
-                <div>
-                    <button type="button" onClick={selectedHandler}>{selected ? <RiBookmarkFill/> : <RiBookmarkLine/>}</button>                    
-                    <Wrap onClick={handleCardClick}>
-                        <Card>
-                            {!flipped ?
-                                <div><span>{index + 1}.</span>{quiz[index].question}</div> :
-                                <div><span>{index + 1}.</span>{quiz[index].answer}</div>}
-                        </Card>
-                    </Wrap>
-                    <ButtonsWrap>
-                        {index > 0 ? <Button type="button" onClick={decrement}>Back</Button> : <Button type="button" disabled>Back</Button>}
-                        {index < quiz.length - 1 ? <Button type="button" onClick={increment}>Next</Button> : <Button type="button" onClick={onFinish}>Finish</Button>}
-                    </ButtonsWrap>
-                </div>
-                :
-                <div>
-                    <p>Good luck</p>
-                </div>
-            }
+            <ButtonSvg type="button" onClick={selectedHandler}>{selected ? <RiBookmarkFill /> : <RiBookmarkLine />}</ButtonSvg>
+            <Wrap >
+                <Card onClick={handleCardClick}>
+                    {!flipped ?
+                        <Text>{index + 1}. {quiz[index].question}</Text> :
+                        <Text>{quiz[index].answer}</Text>}
+                </Card>
+            </Wrap>
+            <ButtonsWrap>
+                {index > 0 ? <Button type="button" onClick={decrement}>Back</Button> : <Button type="button" disabled>Back</Button>}
+                {index < quiz.length - 1 ? <Button type="button" onClick={increment}>Next</Button> : <Button type="button" onClick={onFinish}>Finish</Button>}
+            </ButtonsWrap>
         </Container>
     );
 };

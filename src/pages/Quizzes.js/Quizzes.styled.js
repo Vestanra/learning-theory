@@ -12,6 +12,7 @@ font-size: 16px;
     gap: 16px;
     width: (100% - 48px) / 2;
     flex-wrap: wrap;
+    font-size: 12px;
   }
 `; 
 
@@ -41,10 +42,9 @@ font-weight: 500;
   &.active {
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color: #F2F4F3;
     transform: scale(1.2, 1.2);
-
     @media (max-width: 767px){
     font-size: 14px;
     transform: scale(1, 1.2);
