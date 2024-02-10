@@ -1,15 +1,17 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Quizzes } from "../pages/Quizzes.js/Quizzes";
 import { Theory } from "../pages/Theory/Theory";
-import { CssHtmlQuiz } from "./CssHtmlQuiz/CssHtmlQuiz";
-import { JSQuiz } from "./JSQuiz/JSQuiz";
-import { CssHtmlInfo } from "./CssHtmlInfo/CssHtmlInfo";
-import { JSInfo } from "./JSInfo.js/JSInfo";
-import { ReactInfo } from "./ReactInfo/ReactInfo";
-import { ReactQuiz } from "./ReactQuiz/ReactQuiz";
+import { CssHtmlQuiz } from "./CssHtml/CssHtmlQuiz";
+import { JSQuiz } from "./JS/JSQuiz";
+import { CssHtmlInfo } from "./CssHtml/CssHtmlInfo";
+import { JSInfo } from "./JS/JSInfo";
+import { ReactInfo } from "./React/ReactInfo";
+import { ReactQuiz } from "./React/ReactQuiz";
 import { GlobalStyle } from "./GlobalStyle";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
-import { SavedItems } from "./SavedItemsQuiz/SavedItemsQuiz";
+import { GeneralQuiz } from "./General/GeneralQuiz";
+import { GeneralInfo } from "./General/GeneralTheory";
+import { SavedItems } from "./SavedItems/SavedItemsQuiz";
 
 export const App = () => {
   return (
@@ -17,12 +19,14 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout/>}>
           <Route path="/" element={<Quizzes />}>
+            <Route path="general" element={<GeneralQuiz/>} />
             <Route path="css-html" element={<CssHtmlQuiz />} />
             <Route path="js" element={<JSQuiz />} />
             <Route path="react" element={<ReactQuiz />} />
             <Route path="saved-items" element={<SavedItems/>} />
           </Route>
           <Route path="/theory" element={<Theory />}>
+            <Route path="general" element={<GeneralInfo/>} />
             <Route path="css-html" element={<CssHtmlInfo />} />
             <Route path="js" element={<JSInfo />} />
             <Route path="react" element={<ReactInfo />} />

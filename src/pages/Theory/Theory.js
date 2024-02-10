@@ -6,6 +6,9 @@ export const Theory = () => {
         <div>
             <Wrap>
                 <li>
+                    <Link to="general">general</Link>
+                </li>
+                <li>
                     <Link to="css-html">css-html</Link>
                 </li>
                 <li>
