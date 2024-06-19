@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/learning-theory/static/css/main.28f5bfe0.css",
-    "main.js": "/learning-theory/static/js/main.63845e1b.js",
+    "main.css": "/learning-theory/static/css/main.914fa139.css",
+    "main.js": "/learning-theory/static/js/main.41d059e4.js",
     "index.html": "/learning-theory/index.html",
-    "main.28f5bfe0.css.map": "/learning-theory/static/css/main.28f5bfe0.css.map",
-    "main.63845e1b.js.map": "/learning-theory/static/js/main.63845e1b.js.map"
+    "main.914fa139.css.map": "/learning-theory/static/css/main.914fa139.css.map",
+    "main.41d059e4.js.map": "/learning-theory/static/js/main.41d059e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.28f5bfe0.css",
-    "static/js/main.63845e1b.js"
+    "static/css/main.914fa139.css",
+    "static/js/main.41d059e4.js"
   ]
 }
