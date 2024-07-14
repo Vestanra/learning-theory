@@ -24,6 +24,11 @@ export const Wrap = styled.div`
 height: 300px;
 padding: 12px 24px 24px 24px; 
 cursor: pointer;
+&:focus,
+&:active {
+    outline: none;
+    box-shadow: none;
+  }
 
 @media (max-width: 767px){
     font-size: 14px;
@@ -81,6 +86,17 @@ background-color: white;
 padding: 0;
 padding-right: 24px;
 margin-left: auto;
+width: 32px; 
+height: 32px;
+&:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+    @media (max-width: 767px){
+    width: 24px; 
+    height: 24px;
+  }
 
 svg {
     fill: #609786;

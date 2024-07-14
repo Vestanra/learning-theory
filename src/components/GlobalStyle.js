@@ -9,6 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent; /* Знімає синє підсвічування на iOS і Android */
+  -webkit-focus-ring-color: transparent; /* Знімає синє підсвічування на старіших версіях Android */
+  color: black;
 }
 
 code {
@@ -24,6 +27,7 @@ ul {
 
 button {
     cursor: pointer;
+    color: black;
 }
 
 p {
