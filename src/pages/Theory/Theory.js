@@ -9,7 +9,7 @@ export const Theory = () => {
                     <Link to="general">general</Link>
                 </li>
                 <li>
-                    <Link to="css-html">css-html</Link>
+                    <Link to="css-html">css, html</Link>
                 </li>
                 <li>
                     <Link to="js">js</Link>
